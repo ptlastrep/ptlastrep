@@ -64,31 +64,7 @@
     <div class="container">
         <div>
             <img src="https://ptlastrep.github.io/lastrep-logo.png" alt="Last Rep logo">
-
-            <div id="paypal-button-container"></div>
         </div>
     </div>
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=AZYZaOtXldfjlZNwh3JuUA2JAnTx74bnSrz8OITUTXMRz4EkvRkIlBey2txcUa7rVC5jKXbhlClyoXYs&vault=true&intent=subscription"
-        data-sdk-integration-source="button-factory"></script>
-    <script>
-        paypal.Buttons({
-            style: {
-                shape: 'pill',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal'
-            },
-            createSubscription: function (data, actions) {
-                return actions.subscription.create({
-                    'plan_id': 'P-84T14395S8705394YL6ZZLKQ'
-                });
-            },
-            onApprove: function (data, actions) {
-                alert(data.subscriptionID);
-            }
-        }).render('#paypal-button-container');
-    </script>
 </body>
 </html>
